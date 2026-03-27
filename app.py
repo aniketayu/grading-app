@@ -16,7 +16,7 @@ uploaded_file = st.file_uploader("Upload Excel File", type=["xlsx"])
 
 if uploaded_file:
     # Read Excel
-    df = pd.read_excel(uploaded_file)
+    df = pd.read_excel(uploaded_file, engine="openpyxl")
 
     st.subheader("Preview of Uploaded Excel File")
     st.dataframe(df)
